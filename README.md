@@ -26,7 +26,13 @@ As of recent release of Ubuntu 19.10, the branch for docker is not yet updated f
 
 After installing Docker, you can run an instance of City Chain that exposes RPC API and REST API ports, like this:
 
-<code>sudo curl -L -o docker-compose.yml "https://raw.githubusercontent.com/CityChainFoundation/docker/master/city-chain/node/docker-compose.yml" && sudo docker-compose up -d</code>
+<code>
+sudo curl -L -o docker-compose.yml "https://raw.githubusercontent.com/CityChainFoundation/docker/master/city-chain/node/docker-compose.yml"
+
+sudo curl -L -o city.conf "https://raw.githubusercontent.com/CityChainFoundation/docker/master/city-chain/node/city.conf"
+
+sudo docker-compose up -d
+</code>
 
 ## Docker templates
 
