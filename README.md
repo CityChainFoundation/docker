@@ -16,7 +16,13 @@ To run this, you first need to install curl. Or you can use wget, which comes pr
 
 <code>sudo apt install curl</code>
 
-<code>sudo bash <( curl https://raw.githubusercontent.com/CityChainFoundation/docker/master/scripts/install-docker-on-ubuntu.sh ) </code>
+<code>sudo curl https://raw.githubusercontent.com/CityChainFoundation/docker/master/scripts/install-docker-on-ubuntu.sh</code>
+
+This will write the shell script to the current directory. Please open this file and verify the content. If you trust the script, you can execute it with the following shell command:
+
+<code>sudo bash .\install-docker-on-ubuntu.sh</code>
+
+As of recent release of Ubuntu 19.10, the branch for docker is not yet updated for "eoan" release. You might need to manually edit the script and replace "$(lsb_release -cs)" with "disco" (19.04). Then re-run the script.
 
 After installing Docker, you can run an instance of City Chain that exposes RPC API and REST API ports, like this:
 
