@@ -52,3 +52,15 @@ This folder contains the docker-compose and docker file to build and deploy the 
 ### [city-indexer](city-indexer)
 
 This folder contains the docker-compose to setup and run a City Chain Block Indexer service.
+
+
+## Monitoring
+
+There are various tools to monitor your docker container instances, one of them is [Portainer](https://portainer.io).
+
+```sh
+sudo docker volume create portainer_data
+sudo docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+```
+
+Open the local web browser to http://localhost:9000 and set your administrative password.
