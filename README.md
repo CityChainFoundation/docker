@@ -14,25 +14,29 @@ To quickly install on Ubuntu, the following script has been made for you:
 
 To run this, you first need to install curl. Or you can use wget, which comes pre-installed with Ubuntu.
 
-<code>sudo apt install curl</code>
+```sh
+sudo apt install curl
 
-<code>sudo curl https://raw.githubusercontent.com/CityChainFoundation/docker/master/scripts/install-docker-on-ubuntu.sh</code>
+sudo curl https://raw.githubusercontent.com/CityChainFoundation/docker/master/scripts/install-docker-on-ubuntu.sh
+```
 
 This will write the shell script to the current directory. Please open this file and verify the content. If you trust the script, you can execute it with the following shell command:
 
-<code>sudo bash .\install-docker-on-ubuntu.sh</code>
+```sh
+sudo bash .\install-docker-on-ubuntu.sh
+```
 
 As of recent release of Ubuntu 19.10, the branch for docker is not yet updated for "eoan" release. You might need to manually edit the script and replace "$(lsb_release -cs)" with "disco" (19.04). Then re-run the script.
 
 After installing Docker, you can run an instance of City Chain that exposes RPC API and REST API ports, like this:
 
-<code>
+```sh
 sudo curl -L -o docker-compose.yml "https://raw.githubusercontent.com/CityChainFoundation/docker/master/city-chain/node/docker-compose.yml"
 
 sudo curl -L -o city.conf "https://raw.githubusercontent.com/CityChainFoundation/docker/master/city-chain/node/city.conf"
 
 sudo docker-compose up -d
-</code>
+```
 
 ## Docker templates
 
