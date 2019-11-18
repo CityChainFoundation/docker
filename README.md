@@ -12,11 +12,15 @@ To quickly install on Ubuntu, the following script has been made for you:
 
 [scripts/docker-on-ubuntu.sh](scripts/docker-on-ubuntu.sh)
 
-<code> bash <( curl https://raw.githubusercontent.com/CityChainFoundation/docker/master/scripts/install-docker-on-ubuntu.sh ) </code>
+To run this, you first need to install curl. Or you can use wget, which comes pre-installed with Ubuntu.
+
+<code>sudo apt install curl</code>
+
+<code>sudo bash <( curl https://raw.githubusercontent.com/CityChainFoundation/docker/master/scripts/install-docker-on-ubuntu.sh ) </code>
 
 After installing Docker, you can run an instance of City Chain that exposes RPC API and REST API ports, like this:
 
-<code>curl -L -o docker-compose.yml "https://raw.githubusercontent.com/CityChainFoundation/docker/master/city-chain/node/docker-compose.yml" && docker-compose up -d</code>
+<code>sudo curl -L -o docker-compose.yml "https://raw.githubusercontent.com/CityChainFoundation/docker/master/city-chain/node/docker-compose.yml" && docker-compose up -d</code>
 
 ## Docker templates
 
